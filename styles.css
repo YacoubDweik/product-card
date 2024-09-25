@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: hsl(158, 36%, 37%);
+  --sec-color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+  width: min(90%, 290px);
+  margin: 50px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.one {
+  flex-basis: 200px;
+  background: url(./images/image-product-mobile.jpg);
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(90%, 500px);
+    flex-direction: row;
+  }
+  .one {
+    flex-basis: 275px;
+    background: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+  }
+  .two {
+    flex-basis: 275px;
+  }
+}
+
+.two {
+  padding: 20px;
+}
+
+.two > * {
+  margin: 5px 0;
+}
+
+.title {
+  color: var(--sec-color);
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: "Fraunces";
+}
+
+p {
+  padding: 10px 0;
+  color: var(--sec-color);
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.price {
+  color: var(--main-color);
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Fraunces";
+}
+
+.old-price {
+  position: relative;
+  left: 15px;
+  bottom: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--sec-color);
+  text-decoration: line-through;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+button img {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  transform: translate(-7px, -2px);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(90%, 500px);
+    flex-direction: row;
+  }
+  .one {
+    flex-basis: 275px;
+    background: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+  }
+  .two {
+    flex-basis: 275px;
+    padding: 25px;
+  }
+  h1 {
+    padding-right: 15px;
+  }
+}
